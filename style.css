@@ -3,6 +3,22 @@
    ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap');
 
+/* ============================================
+   Lucide Icons — Base Styles
+   ============================================ */
+[data-lucide], svg.lucide {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
+
 :root {
     /* Premium Light Theme Colors */
     --bg-main: #f8fafc; /* Slate 50 */

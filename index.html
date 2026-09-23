@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -52,14 +52,14 @@
         <div class="container">
             <div class="hero-layout">
                 <div class="hero-content">
-                    <span class="hero-badge"><i class="fa-solid fa-microchip"></i> Powered by YOLOv8</span>
+                    <span class="hero-badge"><i data-lucide="cpu"></i> Powered by YOLOv8</span>
                     <h2>Deteksi Penyakit Jagung <br><span class="gradient-text">Secara Cepat dan Akurat</span></h2>
                     <p>Cukup unggah foto daun jagung Anda, dan sistem kami akan langsung membantu mengenali jenis
                         penyakitnya dalam hitungan detik.</p>
                     <div class="hero-actions">
-                        <a class="btn-primary" href="deteksi.html"><i class="fa-solid fa-magnifying-glass"></i> Mulai
+                        <a class="btn-primary" href="deteksi.html"><i data-lucide="scan-search"></i> Mulai
                             Deteksi</a>
-                        <a class="btn-secondary" href="penyakit.html"><i class="fa-solid fa-book-open"></i> Lihat Jenis
+                        <a class="btn-secondary" href="penyakit.html"><i data-lucide="book-open"></i> Lihat Jenis
                             Penyakit</a>
                     </div>
                     <div class="hero-stats" aria-label="Ringkasan kemampuan">
@@ -81,9 +81,9 @@
                 <aside class="hero-panel" aria-label="Preview fitur">
                     <div class="hero-panel-card">
                         <div class="hero-panel-top">
-                            <span class="pill"><i class="fa-solid fa-bolt"></i> Cepat</span>
-                            <span class="pill"><i class="fa-solid fa-circle-check"></i> Akurat</span>
-                            <span class="pill"><i class="fa-solid fa-desktop"></i> Lokal</span>
+                            <span class="pill"><i data-lucide="zap"></i> Cepat</span>
+                            <span class="pill"><i data-lucide="circle-check"></i> Akurat</span>
+                            <span class="pill"><i data-lucide="monitor"></i> Lokal</span>
                         </div>
                         <div class="hero-panel-body">
                             <div class="mini-preview">
@@ -110,8 +110,7 @@
         <div class="container">
             <section class="steps-section" id="cara-kerja" aria-label="Cara menggunakan">
                 <div class="steps-header">
-                    <h3 class="section-title"><i class="fa-solid fa-wand-magic-sparkles"
-                            style="color:var(--primary)"></i> Cara Pakai (3 Langkah)</h3>
+                    <h3 class="section-title"><i data-lucide="sparkles" style="color:var(--primary)"></i> Cara Pakai (3 Langkah)</h3>
                     <p class="section-subtitle">Didesain supaya cepat dan mudah dipakai di laptop maupun HP.</p>
                 </div>
                 <div class="steps-grid">
@@ -135,17 +134,17 @@
 
             <!-- Quick Feature Cards -->
             <section class="features-section">
-                <h3 class="section-title"><i class="fa-solid fa-bolt" style="color:var(--primary)"></i> Fitur Unggulan
+                <h3 class="section-title"><i data-lucide="zap" style="color:var(--primary)"></i> Fitur Unggulan
                 </h3>
                 <div class="disease-grid">
                     <a href="deteksi.html" class="disease-card blight" style="text-decoration:none; color:inherit;">
-                        <div class="disease-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <div class="disease-icon"><i data-lucide="scan-search"></i></div>
                         <h4>Deteksi Real-time</h4>
                         <p>Upload gambar dan dapatkan hasil deteksi penyakit dalam hitungan detik langsung di browser.
                         </p>
                     </a>
                     <a href="penyakit.html" class="disease-card rust" style="text-decoration:none; color:inherit;">
-                        <div class="disease-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <div class="disease-icon"><i data-lucide="book-open"></i></div>
                         <h4>Info Penyakit</h4>
                         <p>Pelajari 4 jenis kategori penyakit jagung beserta penyebab dan rekomendasi penanganannya.</p>
                     </a>
@@ -167,10 +166,10 @@
             <span class="mobile-nav-title">Menu</span>
             <button class="mobile-nav-close" id="mobileNavClose" aria-label="Tutup menu">✕</button>
         </div>
-        <a class="mobile-nav-link active" href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
-        <a class="mobile-nav-link" href="deteksi.html"><i class="fa-solid fa-magnifying-glass"></i> Deteksi</a>
-        <a class="mobile-nav-link" href="penyakit.html"><i class="fa-solid fa-book-open"></i> Penyakit</a>
-        <a href="deteksi.html" class="mobile-nav-cta"><i class="fa-solid fa-bolt"></i> Mulai Deteksi</a>
+        <a class="mobile-nav-link active" href="index.html"><i data-lucide="house"></i> Beranda</a>
+        <a class="mobile-nav-link" href="deteksi.html"><i data-lucide="scan-search"></i> Deteksi</a>
+        <a class="mobile-nav-link" href="penyakit.html"><i data-lucide="book-open"></i> Penyakit</a>
+        <a href="deteksi.html" class="mobile-nav-cta"><i data-lucide="zap"></i> Mulai Deteksi</a>
     </nav>
     <script>
     (function(){
@@ -185,6 +184,7 @@
         overlay.addEventListener('click',close);
     })();
     </script>
+    <script>lucide.createIcons();</script>
 </body>
 
 </html>

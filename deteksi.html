@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.x/dist/tf.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -59,7 +59,7 @@
     <!-- Page Title -->
     <section class="page-header">
         <div class="container">
-            <h2 class="page-title"><i class="fa-solid fa-magnifying-glass" style="width:36px;height:36px;color:var(--primary)"></i> Deteksi Penyakit Jagung</h2>
+            <h2 class="page-title"><i data-lucide="scan-search" style="width:36px;height:36px;color:var(--primary)"></i> Deteksi Penyakit Jagung</h2>
             <p class="page-subtitle">Unggah foto daun jagung dan temukan jenis penyakitnya secara langsung</p>
         </div>
     </section>
@@ -73,15 +73,15 @@
                 <div class="card upload-card" id="uploadCard">
                     <div class="card-header" style="margin-bottom: 20px;">
                         <div class="input-tabs" style="display: flex; gap: 10px; margin-bottom: 12px;">
-                            <button class="btn-secondary active" id="tabUpload" style="flex: 1; padding: 10px;"><i class="fa-solid fa-upload" style="margin-right:6px"></i>Upload</button>
+                            <button class="btn-secondary active" id="tabUpload" style="flex: 1; padding: 10px;"><i data-lucide="upload" style="margin-right:6px"></i>Upload</button>
                             <button class="btn-secondary" id="tabCamera"
-                                style="flex: 1; padding: 10px; opacity: 0.6;"><i class="fa-solid fa-camera" style="margin-right:6px"></i>Kamera</button>
+                                style="flex: 1; padding: 10px; opacity: 0.6;"><i data-lucide="camera" style="margin-right:6px"></i>Kamera</button>
                         </div>
                         <p id="inputDesc">Pilih atau seret foto daun jagung</p>
                     </div>
                     <div class="upload-zone" id="uploadZone">
                         <div class="upload-icon">
-                            <i class="fa-solid fa-cloud-arrow-up" style="font-size:48px; color: var(--text-muted);"></i>
+                            <i data-lucide="cloud-upload" style="width:48px;height:48px;color:var(--text-muted)"></i>
                         </div>
                         <p class="upload-text">Seret gambar ke sini atau <span class="upload-link">klik untuk
                                 memilih</span></p>
@@ -97,7 +97,7 @@
                                 style="width: 100%; max-height: 400px; display: block; object-fit: cover;"></video>
                         </div>
                         <canvas id="cameraCanvas" style="display:none;"></canvas>
-                        <button class="btn-primary" id="btnCapture" style="width: 100%;"><i class="fa-solid fa-camera" style="margin-right:6px"></i> Ambil Gambar</button>
+                        <button class="btn-primary" id="btnCapture" style="width: 100%;"><i data-lucide="camera" style="margin-right:6px"></i> Ambil Gambar</button>
                     </div>
 
                     <!-- Preview -->
@@ -106,7 +106,7 @@
                         <button class="btn-remove" id="btnRemove" title="Hapus gambar">✕</button>
                     </div>
                     <button class="btn-detect" id="btnDetect" disabled>
-                        <span class="btn-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <span class="btn-icon"><i data-lucide="scan-search"></i></span>
                         <span>Mulai Deteksi</span>
                     </button>
                 </div>
@@ -114,7 +114,7 @@
                 <!-- Result Section -->
                 <div class="card result-card">
                     <div class="card-header">
-                        <h3><i class="fa-solid fa-chart-bar" style="color:var(--primary);margin-right:8px"></i> Hasil Deteksi</h3>
+                        <h3><i data-lucide="bar-chart-2" style="color:var(--primary);margin-right:8px"></i> Hasil Deteksi</h3>
                         <p>Analisis akan muncul di sini</p>
                     </div>
 
@@ -125,7 +125,7 @@
 
                     <!-- Placeholder -->
                     <div class="result-placeholder" id="resultPlaceholder">
-                        <div class="placeholder-icon"><i class="fa-solid fa-image" style="font-size:32px"></i></div>
+                        <div class="placeholder-icon"><i data-lucide="image" style="width:32px;height:32px"></i></div>
                         <p>Upload gambar untuk memulai deteksi</p>
                     </div>
 
@@ -140,10 +140,10 @@
                         <!-- Result Actions -->
                         <div class="result-actions">
                             <button class="btn-action primary" id="btnRecommendation">
-                                <span><i class="fa-solid fa-clipboard-list"></i> Rekomendasi</span>
+                                <span><i data-lucide="clipboard-list"></i> Rekomendasi</span>
                             </button>
                             <button class="btn-action" id="btnDownload">
-                                <span><i class="fa-solid fa-download"></i> Simpan Hasil</span>
+                                <span><i data-lucide="download"></i> Simpan Hasil</span>
                             </button>
                         </div>
                     </div>
@@ -180,10 +180,10 @@
             <span class="mobile-nav-title">Menu</span>
             <button class="mobile-nav-close" id="mobileNavClose" aria-label="Tutup menu">✕</button>
         </div>
-        <a class="mobile-nav-link" href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
-        <a class="mobile-nav-link active" href="deteksi.html"><i class="fa-solid fa-magnifying-glass"></i> Deteksi</a>
-        <a class="mobile-nav-link" href="penyakit.html"><i class="fa-solid fa-book-open"></i> Penyakit</a>
-        <a href="deteksi.html" class="mobile-nav-cta"><i class="fa-solid fa-bolt"></i> Mulai Deteksi</a>
+        <a class="mobile-nav-link" href="index.html"><i data-lucide="house"></i> Beranda</a>
+        <a class="mobile-nav-link active" href="deteksi.html"><i data-lucide="scan-search"></i> Deteksi</a>
+        <a class="mobile-nav-link" href="penyakit.html"><i data-lucide="book-open"></i> Penyakit</a>
+        <a href="deteksi.html" class="mobile-nav-cta"><i data-lucide="zap"></i> Mulai Deteksi</a>
     </nav>
     <script>
     (function(){
@@ -200,6 +200,7 @@
     </script>
 
     <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
 </body>
 
 </html>
