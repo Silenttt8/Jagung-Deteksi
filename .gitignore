@@ -1,0 +1,51 @@
+# ==========================================
+# FILE BESAR - JANGAN DI-PUSH KE GITHUB
+# ==========================================
+
+# File ZIP (terlalu besar, >100MB)
+*.zip
+*.rar
+*.7z
+
+# Dataset YOLOv8 (terlalu besar)
+Penyakit Daun Jagun.v1i.yolov8/
+
+# ==========================================
+# STREAMLIT (tidak digunakan)
+# ==========================================
+.streamlit/
+app.py
+requirements.txt
+
+# ==========================================
+# FILE LOKAL / WINDOWS
+# ==========================================
+*.bat
+*.sh
+
+# ==========================================
+# SCRIPT UTILITY (tidak perlu di GitHub)
+# ==========================================
+scan_tables.py
+
+# ==========================================
+# PYTHON & NOTEBOOK CACHE
+# ==========================================
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# ==========================================
+# SISTEM & IDE
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# ==========================================
+# NODE MODULES (jika ada)
+# ==========================================
+node_modules/
